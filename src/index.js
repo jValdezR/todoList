@@ -4,10 +4,7 @@ import {crearTodoHtml} from './js/componentes'
 
 export const todoList = new TodoList();
 
-let tarea = new Todo('AHHHHHHHHHHH');
-todoList.nuevoTodo(tarea);
+ //El primer argumento es el argumento que se regresa, por lo que se reduce la instruccion de callback
+todoList.todos.forEach(crearTodoHtml);
 
-// tarea.completado = true;
-console.log(todoList);
-
-crearTodoHtml(tarea);
+console.log(todoList.todos);
